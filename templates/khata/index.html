@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operations</title>
+    <style>
+        .container{
+            width: 10rem;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .container a{  
+            background-color: azure;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .container a:hover{  
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select Operation</h2>
+    <div class="container">
+        <a href="{% url 'show_khata' entry_type='transactions' %}">show_khata transactions</a>
+        <a href="{% url 'show_khata' entry_type='given_taken' %}">show_khata given_taken</a>
+        <a href="{% url 'new_entry' entry_type='transactions' %}">new_entry for transactions</a>
+        <a href="{% url 'new_entry' entry_type='given_taken' %}">new_entry for given_taken</a>
+    </div>
+    
+</body>
+</html>

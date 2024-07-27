@@ -1,0 +1,17 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New entry</title>
+</head>
+<body>
+    <h1>{{heading}}</h1>
+    <form method="post" target="new-entry">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    
+</body>
+</html>
